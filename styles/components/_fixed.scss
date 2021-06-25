@@ -4,13 +4,15 @@
   top: 2.7%;
   width: 36px;
   height: 36px;
-  // transform: translateY(-50%);
+  display: flex;
+  align-items: center;
   background: $beige;
   border: 1px solid $border;
   border-radius: 50%;
   cursor: pointer;
+  z-index: 5;
   &__line {
-    margin: 10px auto;
+    margin: 3px auto;
     position: relative;
     width: 18px;
     height: 2px;
@@ -21,29 +23,32 @@
     &::before {
       content: "";
       position: absolute;
-      top: 6px;
+      transform: translateY(-6px);
       left: 0;
       background: $blue;
       width: 100%;
       height: 100%;
+      transition: all 0.3s ease;
     }
     &::after {
-      content: "";
-      position: absolute;
-      top: 12px;
-      left: 0;
-      background: $blue;
-      width: 100%;
-      height: 100%;
+      @extend .burger__line::before;
+      left: initial;
+      right: 0;
+      transform: translateY(6px);
     }
   }
+  .menu:not(.active) &:hover &__line::before,
+  .menu:not(.active) &:hover &__line::after {
+    width: 50%;
+  }
   .line1 {
-    transform: translateY(6px) rotate(123deg);
-    &::after {
-      opacity: 0;
-    }
+    background-color: transparent;
     &::before {
-      transform: translateY(-6px) rotate(295deg);
+      transform: rotate(45deg);
+    }
+    &::after {
+      width: 100%;
+      transform: rotate(-45deg);
     }
   }
 }

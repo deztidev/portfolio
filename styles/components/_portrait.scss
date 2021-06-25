@@ -19,6 +19,7 @@
   border-radius: 50%;
   border: 8px solid $border;
   z-index: 10;
+  transition: opacity 0.5s ease-in-out;
 }
 .head div {
   position: absolute;

@@ -27,7 +27,7 @@ html {
   justify-content: center;
   &__glass {
     background: white;
-    min-height: 80vh;
+    height: 80vh;
     width: 90%;
     background: linear-gradient(
       to right bottom,
@@ -38,3 +38,42 @@ html {
     backdrop-filter: blur(2rem);
   }
 }
+
+@mixin classes {
+  .active {
+    opacity: 1;
+    animation: fadeIn 0.5s ease-in-out forwards;
+  }
+  .hidden {
+    opacity: 0;
+    position: absolute;
+    animation: fadeOut 0.5s ease-in-out forwards;
+  }
+}
+
+// .active {
+//   opacity: 1;
+//   animation: fadeIn 0.5s ease-in-out forwards;
+// }
+// .hidden {
+//   opacity: 0;
+//   position: absolute;
+//   animation: fadeOut 0.5s ease-in-out forwards;
+// }
+
+// @keyframes fadeIn {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+// @keyframes fadeOut {
+//   0% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }
