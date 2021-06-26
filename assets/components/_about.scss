@@ -1,0 +1,74 @@
+.about {
+  @include section;
+  flex-direction: column;
+  justify-content: space-evenly;
+  &__container {
+    position: relative;
+    bottom: 60px;
+    width: 85%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  &__title {
+    font-size: 2.6rem;
+    line-height: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  &__title2 {
+    font-size: 2.1rem;
+    line-height: 5px;
+    font-weight: 500;
+    margin: 15px 0;
+  }
+  &__paragraph {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  &__icons-container {
+    position: relative;
+    bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 160px;
+    justify-content: space-evenly;
+  }
+  &__icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 5rem;
+    padding: 5px;
+  }
+  &__image {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+  .fab {
+    cursor: pointer;
+  }
+  .html:hover {
+    color: #f7621e;
+  }
+  .css:hover {
+    color: #0190ca;
+  }
+  .javascript:hover {
+    color: #f6de1e;
+  }
+  .react:hover {
+    color: #53c1dc;
+  }
+  .sass:hover {
+    color: #cd6698;
+  }
+  .git:hover {
+    color: #f34f29;
+  }
+  .wordpress:hover {
+    color: #21749a;
+  }
+}

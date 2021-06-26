@@ -18,6 +18,9 @@ $border: rgba(255, 255, 255, 0.4);
 html {
   font-size: 62.5%;
 }
+body {
+  overflow-y: hidden;
+}
 .main {
   min-height: 100vh;
   background: linear-gradient(to top left, #868f96 0%, #596164 100%);
@@ -39,6 +42,11 @@ html {
   }
 }
 
+span {
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
 @mixin classes {
   .active {
     opacity: 1;
@@ -51,29 +59,12 @@ html {
   }
 }
 
-// .active {
-//   opacity: 1;
-//   animation: fadeIn 0.5s ease-in-out forwards;
-// }
-// .hidden {
-//   opacity: 0;
-//   position: absolute;
-//   animation: fadeOut 0.5s ease-in-out forwards;
-// }
-
-// @keyframes fadeIn {
-//   0% {
-//     opacity: 0;
-//   }
-//   100% {
-//     opacity: 1;
-//   }
-// }
-// @keyframes fadeOut {
-//   0% {
-//     opacity: 1;
-//   }
-//   100% {
-//     opacity: 0;
-//   }
-// }
+@mixin section {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease-in-out;
+}

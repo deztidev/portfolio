@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./assets/index.css" />
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
     <title>Portfolio</title>
   </head>
   <body>
@@ -17,7 +18,7 @@
         <div class="burger">
           <div class="burger__line"></div>
         </div>
-        <section class="home">
+        <section class="home hidden">
           <div class="head">
             <div class="shoulders"></div>
             <div class="hair-back"></div>
@@ -71,8 +72,58 @@
             <li class="list__item"><a href="#contact">Contact</a></li>
           </ul>
         </nav>
+        <section class="about">
+          <div class="about__container">
+            <h2 class="about__title">About Me</h2>
+            <p class="about__paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum,
+              perspiciatis! Quod vitae cum odit. Accusantium voluptatem, sunt
+              quo obcaecati natus ad dolorum odit. Distinctio sapiente velit,
+              voluptatem rerum tempore voluptas?
+            </p>
+            <h3 class="about__title2">Skills</h3>
+            <div class="about__icons-container">
+              <div class="about__icons">
+                <i class="fab fa-html5 html"></i>
+                <span class="about__skills">HTML5</span>
+              </div>
+              <div class="about__icons">
+                <i class="fab fa-css3-alt css"></i>
+                <span class="about__skills">CSS3</span>
+              </div>
+              <div class="about__icons">
+                <i class="fab fa-js javascript"></i>
+                <span class="about__skills">Javascript</span>
+              </div>
+              <div class="about__icons">
+                <i class="fab fa-react react"></i>
+                <span class="about__skills">React</span>
+              </div>
+              <div class="about__icons">
+                <img
+                  class="about__image redux"
+                  src="./assets/images/redux.png"
+                  alt="Redux icon"
+                />
+                <span class="about__skills">Redux</span>
+              </div>
+              <div class="about__icons">
+                <i class="fab fa-sass sass"></i>
+                <span class="about__skills">Sass</span>
+              </div>
+              <div class="about__icons">
+                <i class="fab fa-git-alt git"></i>
+                <span class="about__skills">Git</span>
+              </div>
+              <div class="about__icons">
+                <i class="fab fa-wordpress wordpress"></i>
+                <span class="about__skills">Wordpress</span>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
     </main>
-    <script src="./styles/index.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

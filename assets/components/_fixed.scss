@@ -37,17 +37,18 @@
       transform: translateY(6px);
     }
   }
-  .menu:not(.active) &:hover &__line::before,
-  .menu:not(.active) &:hover &__line::after {
+  &:hover &__line::before,
+  &:hover &__line::after {
     width: 50%;
   }
   .line1 {
     background-color: transparent;
     &::before {
       transform: rotate(45deg);
+      width: 100% !important;
     }
     &::after {
-      width: 100%;
+      width: 100% !important;
       transform: rotate(-45deg);
     }
   }
@@ -78,8 +79,8 @@
     width: 4.5rem;
     height: 4.5rem;
     background: $beige;
-    top: 18%;
-    left: 20%;
+    top: 16%;
+    left: 12%;
     opacity: 0.8;
     filter: blur(0.3rem);
     z-index: 5;
