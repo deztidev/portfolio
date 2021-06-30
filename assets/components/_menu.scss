@@ -1,5 +1,7 @@
 .menu {
   @include section;
+  justify-content: center;
+  align-items: center;
   &__list {
     list-style: none;
     height: 300px;

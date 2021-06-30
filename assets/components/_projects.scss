@@ -1,0 +1,87 @@
+.projects {
+  @include section;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  &__container {
+    position: relative;
+    top: 70px;
+    height: 140vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  &__title {
+    @include h2;
+  }
+  .apps {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 350px;
+    &__image {
+      width: 250px;
+      height: 150px;
+      border: 8px solid $border;
+      border-radius: 15px;
+    }
+    &__title {
+      @include h4;
+    }
+    &__button {
+      @include button;
+    }
+  }
+}
+
+.modal {
+  @include section;
+  justify-content: center;
+  &__container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  &__image {
+    width: 250px;
+    height: 150px;
+    border-radius: 12px;
+    margin: 18px auto;
+  }
+  &__title {
+    @include h4;
+    margin: 18px 8px;
+  }
+  &__description {
+    font-size: 1.5rem;
+    margin: 8px;
+  }
+  &__info {
+    @extend .modal__description;
+  }
+  &__close {
+    @extend .burger;
+    right: -5px;
+    background: $border;
+  }
+  .close__line {
+    margin: 3px auto;
+    position: relative;
+    width: 18px;
+    height: 2px;
+    background-color: $blue;
+    transform: rotate(45deg);
+    &::before {
+      content: "";
+      position: absolute;
+      transform: translateY(-6px);
+      left: 0;
+      background: $blue;
+      width: 100%;
+      height: 100%;
+      transform: rotate(90deg);
+    }
+  }
+}
