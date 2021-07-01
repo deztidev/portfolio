@@ -22,7 +22,7 @@ export default () => {
     </div>
     <div class="apps">
       <img src="" alt="" class="apps__image" />
-      <h4 class="apps__title">Batatabit Landing Page</h4>
+      <h4 class="apps__title">Batatabit</h4>
       <button class="apps__button">View Project</button>
     </div>
     <div class="apps">

@@ -52,6 +52,11 @@
       transform: rotate(-45deg);
     }
   }
+  &__close {
+    @extend .burger;
+    top: -12px;
+    right: -12px;
+  }
 }
 
 .circle {

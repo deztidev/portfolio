@@ -5,9 +5,7 @@ const Modal = () => {
     <h4 class="modal__title"></h4>
     <p class="modal__description"></p>
     <p class="modal__info"></p>
-    <div class="modal__close">
-      <div class="close__line"></div>
-    </div>
+    
   </div>`;
 
   const section = document.createElement("section");

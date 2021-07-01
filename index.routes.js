@@ -11,6 +11,8 @@ const firstLine = document.querySelector(".burger__line");
 
 let count = 0;
 
+burger.style.display = "flex";
+
 const router = route => {
   replaceNodes(Home());
   firstLine.classList.remove("line1");
@@ -30,7 +32,7 @@ const router = route => {
       break;
     case "#/projects":
       replaceNodes(Projects());
-      displayModal(1);
+      // displayModal(1);
       mainGlass.style.overflowY = "scroll";
       const firstButton = document.querySelector(".apps__button");
       const secondButton = document.querySelectorAll(".apps__button")[1];
@@ -68,29 +70,63 @@ const burgerActivated = () => {
 
 const displayModal = button => {
   replaceNodes(Modal());
-  burger.style.display = "none";
+  firstLine.classList.add("line1");
+  burger.classList.toggle("burger__close");
+  mainGlass.style.overflowY = "inherit";
   const modalImage = document.querySelector(".modal__image");
   const modalTitle = document.querySelector(".modal__title");
   const modalDescription = document.querySelector(".modal__description");
   const modalInfo = document.querySelector(".modal__info");
+  burger.addEventListener(
+    "click",
+    function () {
+      burger.classList.remove("burger__close");
+      firstLine.classList.remove("line1");
+      mainGlass.style.overflowY = "scroll";
+      replaceNodes(Projects());
+      location.hash = "";
+      location.hash = "#/projects";
+    },
+    {
+      once: true,
+    }
+  );
   switch (button) {
     case 0:
       modalImage.setAttribute("src", "./assets/images/spacex-api-project.png");
       modalTitle.textContent = "SpaceX API Project";
       modalDescription.textContent =
-        "Website that displays some information from the SpaceX API, such as previous and next launches and all rockets.";
-      modalInfo.innerHTML = `Technologies used: HTML, Sass, Webpack and React <br>
-        View Online: <a href="https://spacex-api-project.netlify.app/" target=_blank>www.spacex-api-project.netlify.app<a/>`;
+        "Single Page Application that displays some information from the SpaceX API, such as previous and next launches and all rockets.";
+      modalInfo.innerHTML = `Technologies used: HTML, Sass, Webpack and React. <br>
+        View Online: <a href="https://spacex-api-project.netlify.app/" target=_blank>spacex-api-project.netlify.app<a/>`;
+      break;
     case 1:
       modalImage.setAttribute(
         "src",
         "./assets/images/rickandmorty-memorygame.png"
       );
-      modalTitle.textContent = "Rick & Morty memory game";
+      modalTitle.textContent = "Rick & Morty Memory Game";
       modalDescription.textContent =
-        "Website that displays some information from the SpaceX API, such as previous and next launches and all rockets.";
-      modalInfo.innerHTML = `Technologies used: HTML, Sass, Webpack and React <br>
-        View Online: <a href="https://spacex-api-project.netlify.app/" target=_blank>www.spacex-api-project.netlify.app<a/>`;
+        "Memory game connected to the Rick and Morty API to fetch the characters. It was made with Vanilla Javascript, manipulating the DOM and adding animations and sounds.";
+      modalInfo.innerHTML = `Technologies used: HTML, CSS and Javascript. <br>
+        View Online: <a href="https://deztidev.github.io/rickandmorty-memorygame/" target=_blank>deztidev.github.io/rickandmorty-memorygame<a/>`;
+      break;
+    case 2:
+      modalImage.setAttribute("src", "");
+      modalTitle.textContent = "Batatabit";
+      modalDescription.textContent =
+        "Landing Page of a fictitious website that provides information about cryptocurrencies and exchanges.";
+      modalInfo.innerHTML = `Technologies used: HTML and CSS. <br>
+        View Online: <a href="https://deztidev.github.io/batatabit/" target=_blank>deztidev.github.io/batatabit<a/>`;
+      break;
+    case 3:
+      modalImage.setAttribute("src", "");
+      modalTitle.textContent = "Portfolio";
+      modalDescription.textContent =
+        "This website, a Single Page Application made with Vanilla Javascript to create the routes.";
+      modalInfo.innerHTML = `Technologies used: HTML, Sass and Javascript. <br>
+        View Online: <a href="https://martinianosanchi.com/" target=_blank>martinianosanchi.com<a/>`;
+      break;
   }
 };
 
