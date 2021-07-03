@@ -17,6 +17,9 @@ const router = route => {
   replaceNodes(Home());
   firstLine.classList.remove("line1");
   count = 0;
+  const circle = document.querySelector(".circle3");
+  circle.style.top = "16%";
+
   switch (route) {
     case "#/home":
       return replaceNodes(Home());
@@ -32,24 +35,15 @@ const router = route => {
       break;
     case "#/projects":
       replaceNodes(Projects());
-      // displayModal(1);
       mainGlass.style.overflowY = "scroll";
-      const firstButton = document.querySelector(".apps__button");
-      const secondButton = document.querySelectorAll(".apps__button")[1];
-      const thirdButton = document.querySelectorAll(".apps__button")[2];
-      const fourthButton = document.querySelectorAll(".apps__button")[3];
-      firstButton.addEventListener("click", function () {
-        displayModal(0);
-      });
-      secondButton.addEventListener("click", function () {
-        displayModal(1);
-      });
-      thirdButton.addEventListener("click", function () {
-        displayModal(2);
-      });
-      fourthButton.addEventListener("click", function () {
-        displayModal(3);
-      });
+      circle.style.top = "2.5%";
+      for (let i = 0; i < 4; i++) {
+        document
+          .querySelectorAll(".apps__button")
+          [i].addEventListener("click", function () {
+            displayModal(i);
+          });
+      }
       break;
     case "#/contact":
       return replaceNodes(Contact());

@@ -1,0 +1,62 @@
+.contact {
+  @extend .projects;
+  &__container {
+    position: relative;
+    top: 35px;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 20px;
+  }
+  &__title {
+    @include h2;
+    margin: 12px;
+  }
+  &__subtitle {
+    @include h4;
+  }
+}
+
+.form {
+  margin-top: 10px;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__input {
+    font-family: inherit;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 4rem;
+    border: none;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    padding-left: 15px;
+    background: $border;
+    outline: none;
+    &--message {
+      padding-bottom: 6rem;
+      height: 10rem;
+      border-radius: 1rem;
+      vertical-align: text-top;
+    }
+  }
+  &__button {
+    @include button;
+  }
+}
+
+.social {
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: default;
+  &__icon {
+    color: $blue;
+    padding: 0 3px;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

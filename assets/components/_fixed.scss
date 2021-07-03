@@ -94,9 +94,10 @@
   &4 {
     @extend .circle3;
     background: $light-grey;
-    top: 75%;
+    top: 94%;
     left: calc(85% - 2.25rem);
     animation: bounceTop 5s ease-in-out infinite;
+    z-index: 0;
   }
 }
 

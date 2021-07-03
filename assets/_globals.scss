@@ -43,20 +43,13 @@ body {
   }
 }
 
+a {
+  text-decoration: none;
+}
+
 span {
   font-size: 1.5rem;
   font-weight: lighter;
-}
-
-@mixin classes {
-  .active {
-    opacity: 1;
-  }
-  .hidden {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-  }
 }
 
 @mixin section {
