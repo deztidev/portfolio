@@ -259,13 +259,13 @@
   right: 32px;
 }
 .glass::after {
-  width: 13px;
+  width: 12px;
   height: 12px;
   border: 0.5px solid transparent;
   border-top: 2.9px solid var(--glass);
   border-radius: 50%;
   top: 0px;
-  left: 29px;
+  left: 29.2px;
 }
 .glass + .glass {
   transform: scaleX(-1);
