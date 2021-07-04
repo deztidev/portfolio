@@ -8,7 +8,7 @@
 }
 .head {
   position: absolute;
-  top: 40%;
+  top: 269px;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 256px;
@@ -177,12 +177,12 @@
 }
 
 .face {
-  width: 36%;
-  height: 45%;
+  width: 86.4px;
+  height: 108px;
   background: var(--skin);
   border-radius: 100% 100% / 20% 20% 120% 120%;
-  top: 35%;
-  left: 50%;
+  top: 84px;
+  left: 120px;
   transform: translate(-50%, -50%);
 }
 .nose {
@@ -259,13 +259,13 @@
   right: 32px;
 }
 .glass::after {
-  width: 12px;
+  width: 16px;
   height: 12px;
-  border: 0.5px solid transparent;
+  border: 1.5px solid transparent;
   border-top: 2.9px solid var(--glass);
   border-radius: 50%;
-  top: 0px;
-  left: 29.2px;
+  left: 27.2px;
+  z-index: -50;
 }
 .glass + .glass {
   transform: scaleX(-1);
