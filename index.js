@@ -45,7 +45,6 @@ const router = route => {
     case "#/projects":
       replaceNodes(Projects());
       mainGlass.style.overflowY = "scroll";
-      circle.style.top = "2.5%";
       for (let i = 0; i < 4; i++) {
         document
           .querySelectorAll(".apps__button")

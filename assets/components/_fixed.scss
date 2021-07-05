@@ -85,10 +85,9 @@
     height: 4.5rem;
     background: $beige;
     top: 16%;
-    left: 12%;
+    left: 0%;
     opacity: 0.8;
     filter: blur(0.3rem);
-    z-index: 5;
     animation: zoomInOut 8s linear infinite;
   }
   &4 {
@@ -97,7 +96,6 @@
     top: 94%;
     left: calc(85% - 2.25rem);
     animation: bounceTop 5s ease-in-out infinite;
-    z-index: 0;
   }
 }
 
