@@ -10,14 +10,8 @@ const burger = document.querySelector(".burger");
 const firstLine = document.querySelector(".burger__line");
 
 const height = () => {
-  const vh = window.innerHeight * 0.01;
-  // document.documentElement.style.setProperty("--vh", `${vh}px`);
-  document.documentElement.style.setProperty("overflow", "auto");
-  const metaViewport = document.querySelector("meta[name=viewport]");
-  metaViewport.setAttribute(
-    "content",
-    "height=" + vh + "px, width=device-width, initial-scale=1.0"
-  );
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
 };
 
 height();
