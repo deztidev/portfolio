@@ -14,6 +14,8 @@ const height = () => {
   document.documentElement.style.setProperty("--vh", `${vh}px`);
 };
 
+height();
+
 window.addEventListener("resize", height);
 
 let count = 0;
