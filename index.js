@@ -10,7 +10,7 @@ const burger = document.querySelector(".burger");
 const firstLine = document.querySelector(".burger__line");
 
 const height = () => {
-  let vh = window.innerHeight * 0.01;
+  const vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty("--vh", `${vh}px`);
 };
 
@@ -54,7 +54,16 @@ const router = route => {
       }
       break;
     case "#/contact":
-      return replaceNodes(Contact());
+      replaceNodes(Contact());
+      for (let i = 0; i < 4; i++) {
+        document
+          .querySelectorAll(".form__input")
+          [i].addEventListener("focus", function () {
+            const main = document.querySelector(".main");
+            main.style.height = `${window.innerHeight}px`;
+          });
+      }
+      break;
     default:
       console.log("error 404");
   }
