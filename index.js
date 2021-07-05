@@ -9,6 +9,13 @@ const mainGlass = document.querySelector(".main__glass");
 const burger = document.querySelector(".burger");
 const firstLine = document.querySelector(".burger__line");
 
+const height = () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty("--vh", `${vh}px`);
+};
+
+window.addEventListener("resize", height);
+
 let count = 0;
 
 burger.style.display = "flex";

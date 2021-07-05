@@ -22,7 +22,8 @@ body {
   overflow-y: hidden;
 }
 .main {
-  min-height: 100vh;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   background: linear-gradient(to top left, #868f96 0%, #596164 100%);
   font-family: $main-font;
   display: flex;
