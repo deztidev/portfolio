@@ -68,9 +68,9 @@ const router = route => {
             document.querySelector(".contact").style.height =
               (window.innerHeight * 86) / 100 + "px";
             document.querySelector(".contact__container").style.height =
-              (window.innerHeight * 75) / 100 + "px";
+              (window.innerHeight * 93.7) / 100 + "px";
             document.querySelector(".form").style.height =
-              (window.innerHeight * 40) / 100 + "px";
+              (window.innerHeight * 57.3) / 100 + "px";
           });
       }
       break;
