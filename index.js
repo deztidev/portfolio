@@ -70,7 +70,7 @@ const router = route => {
             document.querySelector(".contact__container").style.height =
               (window.innerHeight * 93.7) / 100 + "px";
             document.querySelector(".form").style.height =
-              (window.innerHeight * 50) / 100 + "px";
+              (window.innerHeight * 43) / 100 + "px";
           });
       }
       break;
