@@ -64,10 +64,9 @@ const router = route => {
             document.querySelector(
               ".main"
             ).style.height = `${window.innerHeight}px`;
-            document.querySelector("body").style.position = "relative";
-            mainGlass.style.height = (window.innerHeight * 80) / 100 + "px";
+            mainGlass.style.height = (window.innerHeight * 86) / 100 + "px";
             document.querySelector(".contact").style.height =
-              (window.innerHeight * 80) / 100 + "px";
+              (window.innerHeight * 86) / 100 + "px";
             document.querySelector(".contact__container").style.height =
               (window.innerHeight * 75) / 100 + "px";
             document.querySelector(".form").style.height =

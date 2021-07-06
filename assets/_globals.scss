@@ -18,6 +18,9 @@ $border: rgba(255, 255, 255, 0.4);
 html {
   font-size: 62.5%;
 }
+body {
+  position: relative;
+}
 .main {
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
