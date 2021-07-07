@@ -52,20 +52,21 @@ const router = route => {
       break;
     case "#/contact":
       replaceNodes(Contact());
+      const windowHeight = window.innerHeight;
       for (let i = 0; i < 4; i++) {
+        console.log(windowHeight);
         document
           .querySelectorAll(".form__input")
           [i].addEventListener("focus", function () {
-            document.querySelector(
-              ".main"
-            ).style.height = `${window.innerHeight}px`;
-            mainGlass.style.height = (window.innerHeight * 80) / 100 + "px";
+            console.log(windowHeight);
+            document.querySelector(".main").style.height = `${windowHeight}px`;
+            mainGlass.style.height = (windowHeight * 86) / 100 + "px";
             document.querySelector(".contact").style.height =
-              (window.innerHeight * 100) / 100 + "px";
+              (windowHeight * 100) / 100 + "px";
             document.querySelector(".contact__container").style.height =
-              (window.innerHeight * 100) / 100 + "px";
+              (windowHeight * 100) / 100 + "px";
             document.querySelector(".form").style.height =
-              (window.innerHeight * 54) / 100 + "px";
+              (windowHeight * 54) / 100 + "px";
           });
       }
       break;
