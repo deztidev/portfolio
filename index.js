@@ -62,11 +62,11 @@ const router = route => {
             document.querySelector(".main").style.height = `${windowHeight}px`;
             mainGlass.style.height = (windowHeight * 86) / 100 + "px";
             document.querySelector(".contact").style.height =
-              (windowHeight * 100) / 100 + "px";
+              (windowHeight * 107.5) / 100 + "px";
             document.querySelector(".contact__container").style.height =
-              (windowHeight * 100) / 100 + "px";
+              (windowHeight * 107.5) / 100 + "px";
             document.querySelector(".form").style.height =
-              (windowHeight * 54) / 100 + "px";
+              (windowHeight * 58) / 100 + "px";
           });
       }
       break;
