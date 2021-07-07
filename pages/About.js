@@ -46,6 +46,14 @@ export default () => {
           <i class="fab fa-wordpress wordpress"></i>
           <span class="about__skills">Wordpress</span>
         </div>
+        <div class="about__icons">
+          <img
+            class="about__image webpack"
+            src="./assets/images/webpack.png"
+            alt="Webpack icon"
+          />
+          <span class="about__skills">Webpack</span>
+        </div>
       </div>
     </div>`;
 

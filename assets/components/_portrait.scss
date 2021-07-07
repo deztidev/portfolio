@@ -7,12 +7,11 @@
   --glass: #000;
 }
 .head {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  top: 1%;
   width: 256px;
   height: 256px;
+  margin-bottom: 30px;
   background: $beige;
   border-radius: 50%;
   border: 8px solid $border;

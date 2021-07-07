@@ -30,21 +30,18 @@ const router = route => {
   circle.style.top = "16%";
 
   switch (route) {
-    case "#/home":
+    case "":
+    case "#/":
       return replaceNodes(Home());
     case "#/about":
       replaceNodes(About());
       const redux = document.querySelector(".redux");
-      redux.addEventListener("mouseover", function () {
-        redux.setAttribute("src", "./assets/images/redux-color.svg");
-      });
-      redux.addEventListener("mouseout", function () {
-        redux.setAttribute("src", "./assets/images/redux.png");
-      });
+      const webpack = document.querySelector(".webpack");
+      hoverImage(redux, "redux");
+      hoverImage(webpack, "webpack");
       break;
     case "#/projects":
       replaceNodes(Projects());
-      mainGlass.style.overflowY = "scroll";
       for (let i = 0; i < 4; i++) {
         document
           .querySelectorAll(".apps__button")
@@ -55,8 +52,6 @@ const router = route => {
       break;
     case "#/contact":
       replaceNodes(Contact());
-      const glassHeight = mainGlass.height;
-      console.log(mainGlass.style.height);
       for (let i = 0; i < 4; i++) {
         document
           .querySelectorAll(".form__input")
@@ -87,6 +82,15 @@ const burgerActivated = () => {
     firstLine.classList.remove("line1");
     router(window.location.hash);
   }
+};
+
+const hoverImage = (element, name) => {
+  element.addEventListener("mouseover", function () {
+    element.setAttribute("src", `./assets/images/${name}-color.svg`);
+  });
+  element.addEventListener("mouseout", function () {
+    element.setAttribute("src", `./assets/images/${name}.png`);
+  });
 };
 
 const displayModal = button => {
@@ -144,7 +148,7 @@ const displayModal = button => {
       modalImage.setAttribute("src", "");
       modalTitle.textContent = "Portfolio";
       modalDescription.textContent =
-        "This website, a Single Page Application made with Vanilla Javascript to create the routes.";
+        "This same website, a Single Page Application made with Vanilla Javascript to create the routes.";
       modalInfo.innerHTML = `Technologies used: HTML, Sass and Javascript. <br>
         View Online: <a href="https://martinianosanchi.com/" target=_blank>martinianosanchi.com<a/>`;
       break;
