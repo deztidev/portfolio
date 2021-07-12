@@ -3,11 +3,11 @@ import About from "./pages/About.js";
 import Projects from "./pages/Projects.js";
 import Modal from "./components/Modal.js";
 import Contact from "./pages/Contact.js";
-import Menu from "./pages/Menu.js";
 
 const mainGlass = document.querySelector(".main__glass");
 const burger = document.querySelector(".burger");
 const firstLine = document.querySelector(".burger__line");
+const menu = document.querySelector(".menu");
 
 const height = () => {
   const vh = window.innerHeight * 0.01;
@@ -20,14 +20,12 @@ window.addEventListener("resize", height);
 
 let count = 0;
 
-burger.style.display = "flex";
-
 const router = route => {
-  replaceNodes(Home());
   firstLine.classList.remove("line1");
   count = 0;
   const circle = document.querySelector(".circle3");
   circle.style.top = "16%";
+  menu.classList.remove("activated");
 
   switch (route) {
     case "":
@@ -54,11 +52,9 @@ const router = route => {
       replaceNodes(Contact());
       const windowHeight = window.innerHeight;
       for (let i = 0; i < 4; i++) {
-        console.log(windowHeight);
         document
           .querySelectorAll(".form__input")
           [i].addEventListener("focus", function () {
-            console.log(windowHeight);
             document.querySelector(".main").style.height = `${windowHeight}px`;
             mainGlass.style.height = (windowHeight * 86) / 100 + "px";
             document.querySelector(".contact").style.height =
@@ -78,10 +74,11 @@ const router = route => {
 const burgerActivated = () => {
   count += 1;
   firstLine.classList.add("line1");
-  replaceNodes(Menu());
+  menu.classList.add("activated");
   if (count % 2 == 0) {
     firstLine.classList.remove("line1");
     router(window.location.hash);
+    menu.classList.remove("activated");
   }
 };
 
@@ -99,6 +96,7 @@ const displayModal = button => {
   firstLine.classList.add("line1");
   burger.classList.toggle("burger__close");
   mainGlass.style.overflowY = "inherit";
+  menu.style.display = "none";
   const modalImage = document.querySelector(".modal__image");
   const modalTitle = document.querySelector(".modal__title");
   const modalDescription = document.querySelector(".modal__description");
@@ -109,6 +107,7 @@ const displayModal = button => {
       burger.classList.remove("burger__close");
       firstLine.classList.remove("line1");
       mainGlass.style.overflowY = "scroll";
+      menu.style.display = "flex";
       replaceNodes(Projects());
       location.hash = "";
       location.hash = "#/projects";
