@@ -1,10 +1,11 @@
 .projects {
   @include section;
   flex-direction: column;
+  height: auto;
   &__container {
     position: relative;
     top: 50px;
-    height: 185vh;
+    max-height: 204vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

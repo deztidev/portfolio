@@ -42,6 +42,7 @@
     @include sectionTablet;
     &__title {
       @include h2Tablet;
+      margin-top: 32px;
     }
     .apps {
       &__image {
