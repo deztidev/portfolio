@@ -80,13 +80,13 @@
       rgba(255, 255, 255, 0.8),
       rgba(255, 255, 255, 0.3)
     );
-    top: 5%;
+    top: 4%;
     right: 0;
   }
   &2 {
     @extend .circle1;
     top: auto;
-    bottom: 5%;
+    bottom: 4%;
     left: 0;
   }
   &3 {

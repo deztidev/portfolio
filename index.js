@@ -51,18 +51,34 @@ const router = route => {
     case "#/contact":
       replaceNodes(Contact());
       const windowHeight = window.innerHeight;
+      const mainHeight = document.querySelector(".main").offsetHeight;
+      const mainGlassHeight = mainGlass.offsetHeight;
+      const contactHeight = document.querySelector(".contact").offsetHeight;
+      const contactContainerHeight = document.querySelector(
+        ".contact__container"
+      ).offsetHeight;
+      const formHeight = document.querySelector(".form").offsetHeight;
       for (let i = 0; i < 4; i++) {
         document
           .querySelectorAll(".form__input")
           [i].addEventListener("focus", function () {
-            document.querySelector(".main").style.height = `${windowHeight}px`;
-            mainGlass.style.height = (windowHeight * 86) / 100 + "px";
-            document.querySelector(".contact").style.height =
-              (windowHeight * 107.5) / 100 + "px";
-            document.querySelector(".contact__container").style.height =
-              (windowHeight * 107.5) / 100 + "px";
-            document.querySelector(".form").style.height =
-              (windowHeight * 58) / 100 + "px";
+            // document.querySelector(".main").style.height = `${windowHeight}px`;
+            document.querySelector(".main").style.height = `${mainHeight}px`;
+            // mainGlass.style.height = (windowHeight * 86) / 100 + "px";
+            mainGlass.style.height = `${mainGlassHeight}px`;
+            // document.querySelector(".contact").style.height =
+            //   (windowHeight * 107.5) / 100 + "px";
+            document.querySelector(
+              ".contact"
+            ).style.height = `${contactHeight}px`;
+            // document.querySelector(".contact__container").style.height =
+            //   (windowHeight * 107.5) / 100 + "px";
+            document.querySelector(
+              ".contact__container"
+            ).style.height = `${contactContainerHeight}px`;
+            // document.querySelector(".form").style.height =
+            //   (windowHeight * 58) / 100 + "px";
+            document.querySelector(".form").style.height = `${formHeight}px`;
           });
       }
       break;
