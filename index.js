@@ -50,7 +50,6 @@ const router = route => {
       break;
     case "#/contact":
       replaceNodes(Contact());
-      const windowHeight = window.innerHeight;
       const mainHeight = document.querySelector(".main").offsetHeight;
       const mainGlassHeight = mainGlass.offsetHeight;
       const contactHeight = document.querySelector(".contact").offsetHeight;
@@ -62,22 +61,14 @@ const router = route => {
         document
           .querySelectorAll(".form__input")
           [i].addEventListener("focus", function () {
-            // document.querySelector(".main").style.height = `${windowHeight}px`;
             document.querySelector(".main").style.height = `${mainHeight}px`;
-            // mainGlass.style.height = (windowHeight * 86) / 100 + "px";
             mainGlass.style.height = `${mainGlassHeight}px`;
-            // document.querySelector(".contact").style.height =
-            //   (windowHeight * 107.5) / 100 + "px";
             document.querySelector(
               ".contact"
             ).style.height = `${contactHeight}px`;
-            // document.querySelector(".contact__container").style.height =
-            //   (windowHeight * 107.5) / 100 + "px";
             document.querySelector(
               ".contact__container"
             ).style.height = `${contactContainerHeight}px`;
-            // document.querySelector(".form").style.height =
-            //   (windowHeight * 58) / 100 + "px";
             document.querySelector(".form").style.height = `${formHeight}px`;
           });
       }
@@ -112,7 +103,7 @@ const displayModal = button => {
   firstLine.classList.add("line1");
   burger.classList.toggle("burger__close");
   mainGlass.style.overflowY = "inherit";
-  menu.style.display = "none";
+  menu.classList.add("hidden");
   const modalImage = document.querySelector(".modal__image");
   const modalTitle = document.querySelector(".modal__title");
   const modalDescription = document.querySelector(".modal__description");
@@ -123,7 +114,7 @@ const displayModal = button => {
       burger.classList.remove("burger__close");
       firstLine.classList.remove("line1");
       mainGlass.style.overflowY = "scroll";
-      menu.style.display = "flex";
+      menu.classList.remove("hidden");
       replaceNodes(Projects());
       location.hash = "";
       location.hash = "#/projects";

@@ -2,6 +2,9 @@
   span {
     font-size: 1.6rem;
   }
+  .hidden {
+    display: none;
+  }
   .home {
     @include sectionTablet;
     .presentation {
@@ -92,5 +95,11 @@
         padding: 0 5px;
       }
     }
+  }
+}
+
+@media only screen and (min-height: 1000px) {
+  .head {
+    margin-bottom: 40px;
   }
 }
