@@ -61,7 +61,7 @@
     width: 100%;
     left: 0;
     &__image {
-      width: 90%;
+      width: 70%;
       height: unset;
     }
     &__title {
@@ -101,6 +101,6 @@
 
 @media only screen and (min-height: 1000px) {
   .head {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 }

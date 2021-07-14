@@ -1,0 +1,113 @@
+@media only screen and (min-width: 1300px) {
+  span {
+    font-size: 1.7rem;
+  }
+  .menu {
+    .list__item {
+      & a {
+        font-size: 3.5rem;
+        line-height: 5rem;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  .home {
+    .presentation {
+      &__name {
+        font-size: 2.3rem;
+        letter-spacing: 0.7px;
+      }
+      &__button {
+        @include buttonDesktop;
+      }
+    }
+  }
+  .about {
+    &__title {
+      @include h2Desktop;
+    }
+    &__title2 {
+      font-size: 2.3rem;
+      line-height: 7px;
+    }
+    &__paragraph {
+      font-size: 1.7rem;
+      line-height: 2.2rem;
+    }
+    &__icons {
+      font-size: 6.3rem;
+      padding: 15px 20px;
+    }
+    &__image {
+      width: 63px;
+      height: 63px;
+    }
+  }
+  .projects {
+    &__container {
+      height: 200vh;
+      top: 0;
+    }
+    &__title {
+      @include h2Desktop;
+      margin-top: 32px;
+    }
+    .apps {
+      height: auto;
+      &__image {
+        width: 390px;
+        height: 234px;
+        margin: 20px 0;
+      }
+      &__title {
+        @include h4Desktop;
+        margin: 25px 0;
+      }
+      &__button {
+        @include buttonDesktop;
+      }
+    }
+  }
+  .modal {
+    &__image {
+      height: unset;
+    }
+    &__title {
+      @include h4Desktop;
+      margin: 10px 40px;
+    }
+    &__description {
+      font-size: 1.7rem;
+      margin: 10px 40px;
+    }
+  }
+  .contact {
+    overflow-y: hidden;
+    &__container {
+      height: 75vh;
+      justify-content: space-between;
+    }
+    &__title {
+      @include h2Desktop;
+    }
+    &__subtitle {
+      @include h4Desktop;
+    }
+    .form {
+      height: 45vh;
+      &__input--message {
+        height: 13rem;
+        padding-bottom: 9rem;
+      }
+      &__button {
+        @include buttonDesktop;
+      }
+    }
+    .social {
+      font-size: 2rem;
+      &__icon {
+        padding: 0 6px;
+      }
+    }
+  }
+}
