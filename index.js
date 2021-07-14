@@ -113,7 +113,7 @@ const displayModal = button => {
     function () {
       burger.classList.remove("burger__close");
       firstLine.classList.remove("line1");
-      mainGlass.style.overflowY = "scroll";
+      mainGlass.style.overflowY = "auto";
       menu.classList.remove("hidden");
       replaceNodes(Projects());
       location.hash = "";

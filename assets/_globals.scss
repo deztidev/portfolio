@@ -44,17 +44,6 @@ body {
     backdrop-filter: blur(2rem);
   }
 }
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: $light-grey;
-  border-radius: 20px;
-}
-::-webkit-scrollbar-thumb {
-  background: $blue;
-  border-radius: 20px;
-}
 
 a {
   text-decoration: none;
@@ -69,7 +58,7 @@ span {
   display: flex;
   width: 100%;
   min-height: 80vh;
-  transition: opacity 0.5s ease-in-out;
+  animation: fadeIn 0.4s ease-in-out;
 }
 
 @mixin h2 {
@@ -119,7 +108,14 @@ span {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+}
+
 @mixin sectionTablet {
+  overflow-y: hidden;
   position: relative;
   width: 70%;
   left: 30%;
