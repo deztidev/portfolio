@@ -21,7 +21,7 @@ export default () => {
       <button class="apps__button">View Project</button>
     </div>
     <div class="apps">
-      <img src="../assets/images/batatabit.png" alt="Batatabit" class="apps__image" />
+      <img src="./assets/images/batatabit.png" alt="Batatabit" class="apps__image" />
       <h4 class="apps__title">Batatabit</h4>
       <button class="apps__button">View Project</button>
     </div>
