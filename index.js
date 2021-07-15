@@ -144,7 +144,7 @@ const displayModal = button => {
         View Online: <a href="https://deztidev.github.io/rickandmorty-memorygame/" target=_blank>deztidev.github.io/rickandmorty-memorygame<a/>`;
       break;
     case 2:
-      modalImage.setAttribute("src", "");
+      modalImage.setAttribute("src", "./assets/images/batatabit.png");
       modalTitle.textContent = "Batatabit";
       modalDescription.textContent =
         "Landing Page of a fictitious website that provides information about cryptocurrencies and exchanges.";
@@ -152,7 +152,7 @@ const displayModal = button => {
         View Online: <a href="https://deztidev.github.io/batatabit/" target=_blank>deztidev.github.io/batatabit<a/>`;
       break;
     case 3:
-      modalImage.setAttribute("src", "");
+      modalImage.setAttribute("src", "./assets/images/portfolio.png");
       modalTitle.textContent = "Portfolio";
       modalDescription.textContent =
         "This same website, a Single Page Application made with Vanilla Javascript to create the routes.";

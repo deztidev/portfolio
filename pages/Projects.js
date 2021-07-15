@@ -5,7 +5,7 @@ export default () => {
     <div class="apps">
       <img
         src="./assets/images/spacex-api-project.png"
-        alt=""
+        alt="SpaceX api project"
         class="apps__image"
       />
       <h4 class="apps__title">SpaceX API Project</h4>
@@ -14,19 +14,19 @@ export default () => {
     <div class="apps">
       <img
         src="./assets/images/rickandmorty-memorygame.png"
-        alt=""
+        alt="Rick and Morty Memory Game"
         class="apps__image"
       />
       <h4 class="apps__title">Rick & Morty Memory Game</h4>
       <button class="apps__button">View Project</button>
     </div>
     <div class="apps">
-      <img src="" alt="" class="apps__image" />
+      <img src="../assets/images/batatabit.png" alt="Batatabit" class="apps__image" />
       <h4 class="apps__title">Batatabit</h4>
       <button class="apps__button">View Project</button>
     </div>
     <div class="apps">
-      <img src="" alt="" class="apps__image" />
+      <img src="./assets/images/portfolio.png" alt="Portfolio" class="apps__image" />
       <h4 class="apps__title">Portfolio</h4>
       <button class="apps__button">View Project</button>
     </div>
