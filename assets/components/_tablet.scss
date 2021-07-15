@@ -2,7 +2,6 @@
   span {
     font-size: 1.6rem;
   }
-
   .menu {
     .list__item {
       & a {
@@ -82,6 +81,7 @@
   }
   .contact {
     @include sectionTablet;
+    overflow-y: hidden;
     &__container {
       height: 76vh;
     }
