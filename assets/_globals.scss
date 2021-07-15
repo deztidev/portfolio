@@ -51,6 +51,10 @@ span {
   font-weight: 300;
 }
 
+.hidden {
+  display: none !important;
+}
+
 @mixin section {
   display: flex;
   width: 100%;

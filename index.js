@@ -23,7 +23,7 @@ let count = 0;
 const router = route => {
   firstLine.classList.remove("line1");
   count = 0;
-  menu.classList.remove("activated");
+  menu.classList.remove("active");
 
   switch (route) {
     case "":
@@ -81,11 +81,11 @@ const router = route => {
 const burgerActivated = () => {
   count += 1;
   firstLine.classList.add("line1");
-  menu.classList.add("activated");
+  menu.classList.add("active");
   if (count % 2 == 0) {
     firstLine.classList.remove("line1");
     router(window.location.hash);
-    menu.classList.remove("activated");
+    menu.classList.remove("active");
   }
 };
 
@@ -173,3 +173,8 @@ window.addEventListener("hashchange", function () {
 });
 
 burger.addEventListener("click", burgerActivated);
+
+window.onload = function () {
+  mainGlass.classList.remove("hidden");
+  document.querySelector(".loader").classList.add("hidden");
+};
