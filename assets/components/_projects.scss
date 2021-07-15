@@ -37,6 +37,7 @@
 .modal {
   @include section;
   justify-content: center;
+  overflow-y: auto;
   &__container {
     height: 80vh;
     display: flex;

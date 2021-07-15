@@ -23,8 +23,6 @@ let count = 0;
 const router = route => {
   firstLine.classList.remove("line1");
   count = 0;
-  const circle = document.querySelector(".circle3");
-  circle.style.top = "16%";
   menu.classList.remove("activated");
 
   switch (route) {
@@ -58,19 +56,21 @@ const router = route => {
       ).offsetHeight;
       const formHeight = document.querySelector(".form").offsetHeight;
       for (let i = 0; i < 4; i++) {
-        document
-          .querySelectorAll(".form__input")
-          [i].addEventListener("focus", function () {
-            document.querySelector(".main").style.height = `${mainHeight}px`;
-            mainGlass.style.height = `${mainGlassHeight}px`;
-            document.querySelector(
-              ".contact"
-            ).style.height = `${contactHeight}px`;
-            document.querySelector(
-              ".contact__container"
-            ).style.height = `${contactContainerHeight}px`;
-            document.querySelector(".form").style.height = `${formHeight}px`;
-          });
+        if (window.matchMedia("(max-width: 1300px)").matches) {
+          document
+            .querySelectorAll(".form__input")
+            [i].addEventListener("focus", function () {
+              document.querySelector(".main").style.height = `${mainHeight}px`;
+              mainGlass.style.height = `${mainGlassHeight}px`;
+              document.querySelector(
+                ".contact"
+              ).style.height = `${contactHeight}px`;
+              document.querySelector(
+                ".contact__container"
+              ).style.height = `${contactContainerHeight}px`;
+              document.querySelector(".form").style.height = `${formHeight}px`;
+            });
+        }
       }
       break;
     default:

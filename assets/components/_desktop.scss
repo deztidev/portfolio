@@ -12,6 +12,22 @@
   span {
     font-size: 1.7rem;
   }
+  .circle1 {
+    right: auto;
+    transform: translate(595px, 10px);
+  }
+  .circle2 {
+    left: auto;
+    transform: translate(-595px, -10px);
+  }
+  .circle3 {
+    top: 6%;
+    left: 31%;
+  }
+  .circle4 {
+    top: 94%;
+    left: calc(75% - 2.25rem);
+  }
   .menu {
     .list__item {
       & a {

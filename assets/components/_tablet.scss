@@ -5,6 +5,15 @@
   .hidden {
     display: none;
   }
+  .menu {
+    .list__item {
+      & a {
+        font-size: 3.2rem;
+        line-height: 4rem;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
   .home {
     @include sectionTablet;
     .presentation {
