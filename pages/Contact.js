@@ -6,11 +6,12 @@ export default () => {
     <span class="contact__span">martinianosanchi@gmail.com</span>
     <h4 class="contact__subtitle">Phone</h4>
     <span class="contact__span">+54 9 2612405541</span>
-    <form name="contact" method="post" data-netlify="true" class="form" autocomplete="on">
+    <form name="contact" method="post" class="form" data-netlify="true" autocomplete="on">
+      <input type="hidden" name="form-name" value="contact" />
       <input type="text" class="form__input" id="name" name="name" placeholder="Name*" required />
       <input type="email" class="form__input" id="email" name="email" placeholder="Email*" required />
       <input type="text" class="form__input" name="website" placeholder="Website" />
-      <input type="text" class="form__input form__input--message" name="message" placeholder="Message*" required />
+      <textarea class="form__input form__input--message" name="message" placeholder="Message*" required></textarea>
       <button type="submit" class="form__button">Send Message</button>
     </form>
     <div class="social">
