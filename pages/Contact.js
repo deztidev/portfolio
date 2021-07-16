@@ -11,7 +11,7 @@ export default () => {
       <input type="email" class="form__input" id="email" name="email" placeholder="Email*" required />
       <input type="text" class="form__input" name="website" placeholder="Website" />
       <input type="text" class="form__input form__input--message" name="message" placeholder="Message*" required />
-      <button class="form__button">Send Message</button>
+      <button type="submit" class="form__button">Send Message</button>
     </form>
     <div class="social">
     <a href="https://github.com/deztidev/" target="_blank">
