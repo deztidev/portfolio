@@ -2,10 +2,11 @@
 @import "./components/fixed";
 @import "./components/portrait";
 @import "./components/menu";
-@import "./components/home";
-@import "./components/about";
-@import "./components/projects";
-@import "./components/contact";
+@import "./pages/home";
+@import "./pages/about";
+@import "./pages/projects";
+@import "./pages/contact";
 @import "./components/tablet";
 @import "./components/desktop";
 @import "./components/loader";
+@import "./pages/notfound";

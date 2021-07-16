@@ -104,6 +104,17 @@
       }
     }
   }
+  .main__glass {
+    .not-found {
+      @include sectionTablet;
+      &__title {
+        font-size: 15rem;
+      }
+      &__message {
+        font-size: 3.2rem;
+      }
+    }
+  }
 }
 
 @media only screen and (min-height: 1000px) {

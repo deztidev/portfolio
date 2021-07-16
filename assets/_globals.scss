@@ -27,7 +27,6 @@ body {
   align-items: center;
   justify-content: center;
   &__glass {
-    background: white;
     height: 80vh;
     width: 90%;
     max-width: 1200px;
@@ -57,7 +56,6 @@ span {
 
 @mixin section {
   display: flex;
-  width: 100%;
   min-height: 80vh;
   animation: fadeIn 0.4s ease-in-out;
 }

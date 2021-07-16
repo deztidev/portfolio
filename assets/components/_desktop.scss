@@ -136,4 +136,15 @@
       }
     }
   }
+  .main__glass {
+    .not-found {
+      @include sectionTablet;
+      &__title {
+        font-size: 18rem;
+      }
+      &__message {
+        font-size: 3.5rem;
+      }
+    }
+  }
 }

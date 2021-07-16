@@ -3,6 +3,7 @@ import About from "./pages/About.js";
 import Projects from "./pages/Projects.js";
 import Modal from "./components/Modal.js";
 import Contact from "./pages/Contact.js";
+import NotFound from "./pages/NotFound.js";
 
 const mainGlass = document.querySelector(".main__glass");
 const burger = document.querySelector(".burger");
@@ -74,7 +75,7 @@ const router = route => {
       }
       break;
     default:
-      console.log("error 404");
+      return replaceNodes(NotFound());
   }
 };
 
