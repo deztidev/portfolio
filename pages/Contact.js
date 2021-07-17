@@ -7,7 +7,6 @@ export default () => {
     <h4 class="contact__subtitle">Phone</h4>
     <span class="contact__span">+54 9 2612405541</span>
     <form name="contact" method="post" class="form" data-netlify="true" autocomplete="on">
-      <input type="hidden" name="form-name" value="contact" />
       <input type="text" class="form__input" id="name" name="name" placeholder="Name*" required />
       <input type="email" class="form__input" id="email" name="email" placeholder="Email*" required />
       <input type="text" class="form__input" name="website" placeholder="Website" />
