@@ -49,33 +49,41 @@ const router = route => {
       break;
     case "#/contact":
       replaceNodes(Contact());
-      const mainHeight = document.querySelector(".main").offsetHeight;
-      const mainGlassHeight = mainGlass.offsetHeight;
-      console.log(mainHeight);
-      console.log(mainGlassHeight);
-      const contactHeight = document.querySelector(".contact").offsetHeight;
-      const contactContainerHeight = document.querySelector(
-        ".contact__container"
-      ).offsetHeight;
-      const formHeight = document.querySelector(".form").offsetHeight;
-      for (let i = 0; i < 4; i++) {
-        if (window.matchMedia("(max-width: 1300px)").matches) {
-          document
-            .querySelectorAll(".form__input")
-            [i].addEventListener("focus", function () {
-              console.log(mainGlassHeight);
-              document.querySelector(".main").style.height = `${mainHeight}px`;
-              mainGlass.style.height = `${mainGlassHeight}px`;
-              document.querySelector(
-                ".contact"
-              ).style.height = `${contactHeight}px`;
-              document.querySelector(
-                ".contact__container"
-              ).style.height = `${contactContainerHeight}px`;
-              document.querySelector(".form").style.height = `${formHeight}px`;
-            });
+      setTimeout(() => {
+        const mainHeight = document.querySelector(".main").offsetHeight;
+        const mainGlassHeight = mainGlass.offsetHeight;
+        const contactHeight = document.querySelector(".contact").offsetHeight;
+        const contactContainerHeight = document.querySelector(
+          ".contact__container"
+        ).offsetHeight;
+        const formHeight = document.querySelector(".form").offsetHeight;
+        console.log(mainHeight);
+        console.log(contactHeight);
+        console.log(contactContainerHeight);
+        console.log(formHeight);
+        for (let i = 0; i < 4; i++) {
+          if (window.matchMedia("(max-width: 1300px)").matches) {
+            document
+              .querySelectorAll(".form__input")
+              [i].addEventListener("focus", function () {
+                console.log(mainGlassHeight);
+                document.querySelector(
+                  ".main"
+                ).style.height = `${mainHeight}px`;
+                mainGlass.style.height = `${mainGlassHeight}px`;
+                document.querySelector(
+                  ".contact"
+                ).style.height = `${contactHeight}px`;
+                document.querySelector(
+                  ".contact__container"
+                ).style.height = `${contactContainerHeight}px`;
+                document.querySelector(
+                  ".form"
+                ).style.height = `${formHeight}px`;
+              });
+          }
         }
-      }
+      }, 140);
       break;
     default:
       return replaceNodes(NotFound());
