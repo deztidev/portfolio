@@ -35,10 +35,9 @@
     background: $border;
     outline: none;
     &--message {
-      padding-bottom: 6rem;
+      padding-bottom: 0.8rem;
       height: 10rem;
       border-radius: 1rem;
-      vertical-align: text-top;
     }
   }
   &__button {
