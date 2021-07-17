@@ -51,6 +51,8 @@ const router = route => {
       replaceNodes(Contact());
       const mainHeight = document.querySelector(".main").offsetHeight;
       const mainGlassHeight = mainGlass.offsetHeight;
+      console.log(mainHeight);
+      console.log(mainGlassHeight);
       const contactHeight = document.querySelector(".contact").offsetHeight;
       const contactContainerHeight = document.querySelector(
         ".contact__container"
@@ -61,6 +63,7 @@ const router = route => {
           document
             .querySelectorAll(".form__input")
             [i].addEventListener("focus", function () {
+              console.log(mainGlassHeight);
               document.querySelector(".main").style.height = `${mainHeight}px`;
               mainGlass.style.height = `${mainGlassHeight}px`;
               document.querySelector(
