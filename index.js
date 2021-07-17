@@ -57,10 +57,6 @@ const router = route => {
           ".contact__container"
         ).offsetHeight;
         const formHeight = document.querySelector(".form").offsetHeight;
-        console.log(mainHeight);
-        console.log(contactHeight);
-        console.log(contactContainerHeight);
-        console.log(formHeight);
         for (let i = 0; i < 4; i++) {
           if (window.matchMedia("(max-width: 1300px)").matches) {
             document
