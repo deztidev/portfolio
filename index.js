@@ -25,6 +25,7 @@ const router = route => {
   firstLine.classList.remove("line1");
   count = 0;
   menu.classList.remove("active");
+  mainGlass.style.overflowY = "overlay";
 
   switch (route) {
     case "":
@@ -90,6 +91,7 @@ const burgerActivated = () => {
   count += 1;
   firstLine.classList.add("line1");
   menu.classList.add("active");
+  mainGlass.style.overflowY = "hidden";
   if (count % 2 == 0) {
     firstLine.classList.remove("line1");
     router(window.location.hash);
