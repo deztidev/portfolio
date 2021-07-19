@@ -6,7 +6,7 @@ export default () => {
         I'm a Frontend Developer who enjoys building interactive websites
         that run across platforms and devices, creating dynamic user
         experiencies with the aim of adding value to people's lives. I'm a
-        curious man with a passion for innovation through problem solving.
+        curious person with a passion for innovation through problem solving.
       </p>
       <h3 class="about__title2">Skills</h3>
       <div class="about__icons-container">
