@@ -26,6 +26,8 @@ const router = route => {
   count = 0;
   menu.classList.remove("active");
   mainGlass.style.overflowY = "overlay";
+  burger.classList.remove("burger__close");
+  menu.classList.remove("hidden");
 
   switch (route) {
     case "":
@@ -63,7 +65,6 @@ const router = route => {
             document
               .querySelectorAll(".form__input")
               [i].addEventListener("focus", function () {
-                console.log(mainGlassHeight);
                 document.querySelector(
                   ".main"
                 ).style.height = `${mainHeight}px`;
@@ -118,7 +119,7 @@ const displayModal = button => {
   const modalTitle = document.querySelector(".modal__title");
   const modalDescription = document.querySelector(".modal__description");
   const modalInfo = document.querySelector(".modal__info");
-  burger.addEventListener(
+  document.querySelector(".burger__close").addEventListener(
     "click",
     function () {
       burger.classList.remove("burger__close");
@@ -138,9 +139,10 @@ const displayModal = button => {
       modalImage.setAttribute("src", "./assets/images/spacex-api-project.png");
       modalTitle.textContent = "SpaceX API Project";
       modalDescription.textContent =
-        "Single Page Application that displays some information from the SpaceX API, such as previous and next launches and all rockets.";
+        "Single Page Application that displays some information from the SpaceX API, such as previous and next launches, and all rockets.";
       modalInfo.innerHTML = `Technologies used: HTML, Sass, Webpack and React. <br>
-        View Online: <a href="https://spacex-api-project.netlify.app/" target=_blank>spacex-api-project.netlify.app<a/>`;
+        View Online: <a href="https://spacex-api-project.netlify.app/" target=_blank>spacex-api-project.netlify.app<a/> <br>
+        Code: <a href="https://github.com/deztidev/spacex-api/" target=_blank>github.com/deztidev/spacex-api<a/>`;
       break;
     case 1:
       modalImage.setAttribute(
@@ -151,7 +153,8 @@ const displayModal = button => {
       modalDescription.textContent =
         "Memory game connected to the Rick and Morty API to fetch the characters. It was made with Vanilla Javascript, manipulating the DOM and adding animations and sounds.";
       modalInfo.innerHTML = `Technologies used: HTML, CSS and Javascript. <br>
-        View Online: <a href="https://deztidev.github.io/rickandmorty-memorygame/" target=_blank>deztidev.github.io/rickandmorty-memorygame<a/>`;
+        View Online: <a href="https://deztidev.github.io/rickandmorty-memorygame/" target=_blank>deztidev.github.io/rickandmorty-memorygame<a/> <br>
+        Code: <a href="https://github.com/deztidev/rickandmorty-memorygame/" target=_blank>github.com/deztidev/rickandmorty-memorygame<a/>`;
       break;
     case 2:
       modalImage.setAttribute("src", "./assets/images/batatabit.png");
@@ -159,7 +162,8 @@ const displayModal = button => {
       modalDescription.textContent =
         "Landing Page of a fictitious website that provides information about cryptocurrencies and exchanges.";
       modalInfo.innerHTML = `Technologies used: HTML and CSS. <br>
-        View Online: <a href="https://deztidev.github.io/batatabit/" target=_blank>deztidev.github.io/batatabit<a/>`;
+        View Online: <a href="https://deztidev.github.io/batatabit/" target=_blank>deztidev.github.io/batatabit<a/> <br>
+        Code: <a href="https://github.com/deztidev/rickandmorty-memorygame/" target=_blank>github.com/deztidev/rickandmorty-memorygame<a/>`;
       break;
     case 3:
       modalImage.setAttribute("src", "./assets/images/portfolio.png");
@@ -167,7 +171,8 @@ const displayModal = button => {
       modalDescription.textContent =
         "This same website, a Single Page Application made with Vanilla Javascript to create the routes.";
       modalInfo.innerHTML = `Technologies used: HTML, Sass and Javascript. <br>
-        View Online: <a href="https://martinianosanchi.com/" target=_blank>martinianosanchi.com<a/>`;
+        View Online: <a href="https://martinianosanchi.com/" target=_blank>martinianosanchi.com<a/> <br>
+        Code: <a href="https://github.com/deztidev/rickandmorty-memorygame/" target=_blank>github.com/deztidev/rickandmorty-memorygame<a/>`;
       break;
   }
 };
