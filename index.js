@@ -151,8 +151,8 @@ const displayModal = button => {
       );
       modalTitle.textContent = "Rick & Morty Memory Game";
       modalDescription.textContent =
-        "Memory game connected to the Rick and Morty API to fetch the characters. It was made with Vanilla Javascript, manipulating the DOM and adding animations and sounds.";
-      modalInfo.innerHTML = `Technologies used: HTML, CSS and Javascript. <br>
+        "Memory game connected to the Rick and Morty API to fetch the characters. It was made with Vanilla JavaScript, manipulating the DOM and adding animations and sounds.";
+      modalInfo.innerHTML = `Technologies used: HTML, CSS and JavaScript. <br>
         View Online: <a href="https://deztidev.github.io/rickandmorty-memorygame/" target=_blank>deztidev.github.io/rickandmorty-memorygame<a/> <br>
         Code: <a href="https://github.com/deztidev/rickandmorty-memorygame/" target=_blank>github.com/deztidev/rickandmorty-memorygame<a/>`;
       break;
@@ -169,8 +169,8 @@ const displayModal = button => {
       modalImage.setAttribute("src", "./assets/images/portfolio.png");
       modalTitle.textContent = "Portfolio";
       modalDescription.textContent =
-        "This same website, a Single Page Application made with Vanilla Javascript to create the routes.";
-      modalInfo.innerHTML = `Technologies used: HTML, Sass and Javascript. <br>
+        "This same website, a Single Page Application made with Vanilla JavaScript to create the routes.";
+      modalInfo.innerHTML = `Technologies used: HTML, Sass and JavaScript. <br>
         View Online: <a href="https://martinianosanchi.com/" target=_blank>martinianosanchi.com<a/> <br>
         Code: <a href="https://github.com/deztidev/rickandmorty-memorygame/" target=_blank>github.com/deztidev/rickandmorty-memorygame<a/>`;
       break;

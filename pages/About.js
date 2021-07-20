@@ -20,7 +20,7 @@ export default () => {
         </div>
         <div class="about__icons">
           <i class="fab fa-js javascript"></i>
-          <span class="about__skills">Javascript</span>
+          <span class="about__skills">JavaScript</span>
         </div>
         <div class="about__icons">
           <i class="fab fa-react react"></i>
