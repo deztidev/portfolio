@@ -1,60 +1,63 @@
 .contact {
-  @extend .projects;
-  &__container {
-    position: relative;
-    top: 35px;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin: 0 20px;
-  }
-  &__title {
-    @include h2;
-    margin: 12px;
-  }
-  &__subtitle {
-    @include h4;
-  }
+	@extend .projects;
+	&__container {
+		position: relative;
+		top: 35px;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		margin: 0 20px;
+	}
+	&__title {
+		@include h2;
+		margin: 12px;
+	}
+	&__subtitle {
+		@include h4;
+	}
 }
 
 .form {
-  margin-top: 10px;
-  height: 54vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  &__input {
-    font-family: inherit;
-    font-size: 1.5rem;
-    width: 100%;
-    height: 4rem;
-    border: none;
-    border-radius: 2.5rem;
-    padding-left: 15px;
-    background: $border;
-    outline: none;
-    &--message {
-      padding-top: 0.8rem;
-      height: 10rem;
-      border-radius: 1rem;
-    }
-  }
-  &__button {
-    @include button;
-  }
+	margin-top: 10px;
+	height: 54vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	&__input {
+		font-family: inherit;
+		font-size: 1.5rem;
+		width: 100%;
+		height: 4rem;
+		border: none;
+		border-radius: 2.5rem;
+		padding-left: 15px;
+		background: $border;
+		outline: none;
+		&:focus {
+			box-shadow: 0 0 0 2px $blue;
+		}
+		&--message {
+			padding-top: 0.8rem;
+			height: 10rem;
+			border-radius: 1rem;
+		}
+	}
+	&__button {
+		@include button;
+	}
 }
 
 .social {
-  text-align: center;
-  font-size: 1.5rem;
-  cursor: default;
-  &__icon {
-    color: $blue;
-    padding: 0 3px;
-    cursor: pointer;
-    &:hover {
-      opacity: 0.5;
-    }
-  }
+	text-align: center;
+	font-size: 1.5rem;
+	cursor: default;
+	&__icon {
+		color: $blue;
+		padding: 0 3px;
+		cursor: pointer;
+		&:hover {
+			opacity: 0.5;
+		}
+	}
 }

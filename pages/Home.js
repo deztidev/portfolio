@@ -1,5 +1,5 @@
 export default () => {
-  const view = `
+	const view = `
       <div class="head">
         <div class="shoulders"></div>
         <div class="hair-back"></div>
@@ -38,16 +38,16 @@ export default () => {
         <h1 class="presentation__name">Martiniano Sanchi</h1>
         <span class="presentation__span">Frontend Developer</span>
         <a href="#/projects" class="presentation__link">
-          <button class="presentation__button">Projects</button>
+          <button tabindex="-1" class="presentation__button">Projects</button>
         </a>
         <a href="#/contact" class="presentation__link">
-          <button class="presentation__button">Contact</button>
+          <button tabindex="-1" class="presentation__button">Contact</button>
         </a>
       </div>
     `;
 
-  const section = document.createElement("section");
-  section.classList.add("home");
-  section.innerHTML = view;
-  return section;
+	const section = document.createElement("section");
+	section.classList.add("home");
+	section.innerHTML = view;
+	return section;
 };
