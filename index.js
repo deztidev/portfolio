@@ -43,7 +43,7 @@ const router = route => {
 			break;
 		case "#/projects":
 			replaceNodes(Projects());
-			for (let i = 0; i < 4; i++) {
+			for (let i = 0; i < 5; i++) {
 				document
 					.querySelectorAll(".apps__button")
 					[i].addEventListener("click", function () {
@@ -139,6 +139,14 @@ const displayModal = button => {
 	);
 	switch (button) {
 		case 0:
+			modalImage.setAttribute("src", "./assets/images/superhero-app.png");
+			modalTitle.textContent = "Superhero App";
+			modalDescription.textContent =
+				"React Challenge to get into Alkemy Acceleration. A Single Page Application that allows you to create a team of superheroes consuming an external API, and showing different attributes. ";
+			modalInfo.innerHTML = ` HTML, Sass, Bootstrap, React and Redux. <br>
+        Code: <a href="https://github.com/deztidev/alkemy-challenge-react" target=_blank>github.com/deztidev/alkemy-challenge-react<a/>`;
+			break;
+		case 1:
 			modalImage.setAttribute("src", "./assets/images/spacex-api-project.png");
 			modalTitle.textContent = "SpaceX API Project";
 			modalDescription.textContent =
@@ -147,7 +155,7 @@ const displayModal = button => {
         View Online: <a href="https://spacex-api-project.netlify.app/" target=_blank>spacex-api-project.netlify.app<a/> <br>
         Code: <a href="https://github.com/deztidev/spacex-api/" target=_blank>github.com/deztidev/spacex-api<a/>`;
 			break;
-		case 1:
+		case 2:
 			modalImage.setAttribute(
 				"src",
 				"./assets/images/rickandmorty-memorygame.png"
@@ -159,7 +167,7 @@ const displayModal = button => {
         View Online: <a href="https://deztidev.github.io/rickandmorty-memorygame/" target=_blank>deztidev.github.io/rickandmorty-memorygame<a/> <br>
         Code: <a href="https://github.com/deztidev/rickandmorty-memorygame/" target=_blank>github.com/deztidev/rickandmorty-memorygame<a/>`;
 			break;
-		case 2:
+		case 3:
 			modalImage.setAttribute("src", "./assets/images/batatabit.png");
 			modalTitle.textContent = "Batatabit";
 			modalDescription.textContent =
@@ -168,7 +176,7 @@ const displayModal = button => {
         View Online: <a href="https://deztidev.github.io/batatabit/" target=_blank>deztidev.github.io/batatabit<a/> <br>
         Code: <a href="https://github.com/deztidev/rickandmorty-memorygame/" target=_blank>github.com/deztidev/rickandmorty-memorygame<a/>`;
 			break;
-		case 3:
+		case 4:
 			modalImage.setAttribute("src", "./assets/images/portfolio.png");
 			modalTitle.textContent = "Portfolio";
 			modalDescription.textContent =

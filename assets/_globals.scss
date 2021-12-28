@@ -27,10 +27,11 @@ body {
   align-items: center;
   justify-content: center;
   &__glass {
+    position: relative;
     height: 80vh;
     width: 90%;
     max-width: 1200px;
-    overflow-y: overlay;
+    overflow-y: auto;
     background: linear-gradient(
       to right bottom,
       rgba(255, 255, 255, 0.7),
@@ -86,6 +87,7 @@ span {
   border: 1px solid $border;
   border-radius: 2.5rem;
   cursor: pointer;
+  z-index: 5;
   &:hover {
     color: $light-grey;
     background: transparent;

@@ -43,7 +43,7 @@
     height: 50px;
     cursor: pointer;
   }
-  .fab {
+  .fab, .fas {
     cursor: pointer;
   }
   .html:hover {
@@ -58,13 +58,22 @@
   .react:hover {
     color: #53c1dc;
   }
+  .bootstrap:hover {
+    color: #583979;
+  }
   .sass:hover {
     color: #cd6698;
   }
   .git:hover {
     color: #f34f29;
   }
+  .github:hover {
+    color: #1D1F25;
+  }
   .wordpress:hover {
     color: #21749a;
+  }
+  .sql:hover {
+    color: #0172CB;
   }
 }

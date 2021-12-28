@@ -71,8 +71,8 @@
   }
   .projects {
     &__container {
-      height: 200vh;
-      top: 0;
+      height: 204vh;
+      top: 20px;
     }
     &__title {
       @include h2Desktop;
@@ -87,7 +87,7 @@
       }
       &__title {
         @include h4Desktop;
-        margin: 25px 0;
+        margin-bottom: 20px;
       }
       &__button {
         @include buttonDesktop;
@@ -136,6 +136,8 @@
     }
   }
   .main__glass {
+    scrollbar-color: $blue $light-grey;
+    scrollbar-width: thin;
     .not-found {
       @include sectionTablet;
       &__title {

@@ -24,6 +24,7 @@
       height: 150px;
       border: 8px solid $border;
       border-radius: 15px;
+      object-fit: cover;
     }
     &__title {
       @include h4;
@@ -47,8 +48,10 @@
   &__image {
     width: 275px;
     height: 165px;
+    max-height: 75%;
     border-radius: 12px;
     margin: 18px auto;
+    object-fit: cover;
   }
   &__title {
     @include h4;

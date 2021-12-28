@@ -8,7 +8,7 @@ export default () => {
         experiencies with the aim of adding value to people's lives. I'm a
         curious person with a passion for innovation through problem solving.
       </p>
-      <h3 class="about__title2">Skills</h3>
+      <h3 class="about__title2">Technologies</h3>
       <div class="about__icons-container">
         <div class="about__icons">
           <i class="fab fa-html5 html"></i>
@@ -35,6 +35,10 @@ export default () => {
           <span class="about__skills">Redux</span>
         </div>
         <div class="about__icons">
+          <i class="fab fa-bootstrap bootstrap"></i>
+          <span class="about__skills">Bootstrap</span>
+        </div>
+        <div class="about__icons">
           <i class="fab fa-sass sass"></i>
           <span class="about__skills">Sass</span>
         </div>
@@ -53,6 +57,10 @@ export default () => {
             alt="Webpack icon"
           />
           <span class="about__skills">Webpack</span>
+        </div>
+        <div class="about__icons">
+          <i class="fas fa-database sql"></i>
+          <span class="about__skills">SQL</span>
         </div>
       </div>
     </div>`;
